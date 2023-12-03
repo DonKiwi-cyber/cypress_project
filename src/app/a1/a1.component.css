@@ -1,0 +1,24 @@
+div{
+    margin: 20px
+}
+
+div.container{
+    width: auto;
+    height: auto;
+}
+
+div.mean,.stddev{
+    display: inline-block;
+}
+
+button {
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+h3{
+    font-weight: 500;
+}

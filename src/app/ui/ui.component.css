@@ -1,0 +1,19 @@
+div {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    text-align: center;
+}
+
+div.title{
+    font-size:2cm;
+}
+
+div.form{
+    padding-top: 20px;
+}
+
+button {
+    display: inline-block;
+    margin: 20px 14%;
+}
