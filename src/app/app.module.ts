@@ -10,14 +10,16 @@ import { A1Component } from './a1/a1.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { A3Component } from './a3/a3.component'
+import { A3Component } from './a3/a3.component';
+import { A5Component } from './a5/a5.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     UiComponent,
     A1Component,
-    A3Component
+    A3Component,
+    A5Component
   ],
   imports: [
     BrowserModule,
