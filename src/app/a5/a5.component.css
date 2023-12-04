@@ -1,0 +1,30 @@
+div{
+    margin: 20px
+}
+
+div.container{
+    width: auto;
+    height: 12cm;
+}
+
+div.result{
+    position: relative;
+    height: auto;
+    text-align: start;
+}
+
+button.close {
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+h3{
+    font-weight: 500;
+}
+
+span.TYPE,.RESULT,.ERROR{
+    font-weight: 600;
+}

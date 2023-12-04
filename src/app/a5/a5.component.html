@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="header">
+        <h1>Resultados</h1>
+        <button type="button" class="close" (click)="close()">X</button>
+    </div>
+    <div class="form">
+        <form>
+            <div class="input">
+                <div class="common">
+                    <label for="x0">x0</label>
+                    <input id="operator" [(ngModel)]="x0" name="x0" class="operator x0" type="number" placeholder="0.0">
+
+                    <label for="x1">x1</label>
+                    <input id="operator" [(ngModel)]="x1" name="x1" class="operator x1" type="number" placeholder="0.0"><br>
+
+                    <label for="num-seg">Num-seg</label>
+                    <input id="operator" [(ngModel)]="num_seg" name="num_seg" class="operator num_seg" type="number" placeholder="0">
+
+                    <label for="Error">Error</label>
+                    <input id="operator" [(ngModel)]="Error" name="Error" class="operator Error" type="number" placeholder="0.0">
+                </div>
+
+                <div class="radio">
+                    <label for="function">Función:</label><br>
+
+                    <label for="function">2x</label>
+                    <input type="radio" [(ngModel)]="function" id="radio" name="function" value="2x" (click)="disabled()"><br>
+                    
+                    <label for="function">x^2</label>
+                    <input type="radio" [(ngModel)]="function" id="radio" name="function" value="x2" (click)="disabled()"><br>
+
+                    <label for="function">1/x</label>
+                    <input type="radio" [(ngModel)]="function" id="radio" name="function" value="1_x" (click)="disabled()"><br>
+
+                    <label for="function">T-student</label>
+                    <input type="radio" [(ngModel)]="function" id="radio" name="function" value="t_student" (click)="disabled()"><br>
+                </div>
+
+                <div class="dof">
+                    <label for="dof">DOF</label>
+                    <input id="dof" [(ngModel)]="dof" name="dof" class="operator dof" type="number" placeholder="0" disabled="true">
+                </div>
+            </div>
+            <div class="button">
+                <button type="button" class="realize" (click)="realizeFunction()">Realizar</button>
+            </div>
+        </form>
+        
+    </div>
+    <div class="result">
+        <h2>Resultado: </h2>
+        <div class="resultContainer">
+            <span class="TYPE">Función: </span>
+            <span class="type">{{ type }}</span><br>
+
+            <span class="RESULT">Resultado: </span>
+            <span class="result">{{ result }}</span><br>
+
+            <span class="ERROR">Error: </span>
+            <span class="error">{{ err }}</span>
+        </div>
+    </div>
+</div>

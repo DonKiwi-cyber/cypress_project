@@ -1,6 +1,11 @@
-describe('My First Test', () => {
-  it('Visits the initial project page', () => {
-    cy.visit('/')
-    cy.contains('app is running!')
-  })
+describe('A1', () => {
+  beforeEach(() => {
+    cy.visit('/');
+  });
+
+  it('has the correct title', () => {
+    cy.title().should('equal', 'E2e_tests');
+  });
+
+
 })

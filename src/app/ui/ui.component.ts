@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { A1Component } from '../a1/a1.component';
 import { A3Component } from '../a3/a3.component';
+import { A5Component } from '../a5/a5.component';
 
 @Component({
   selector: 'app-ui',
@@ -18,5 +19,9 @@ export class UiComponent {
 
   openA3(){
     const dialog3 = this.dialog.open(A3Component)
+  }
+
+  openA5(){
+    const dialog5 = this.dialog.open(A5Component)
   }
 }
