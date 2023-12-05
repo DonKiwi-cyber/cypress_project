@@ -1,1 +1,12 @@
-<p>login works!</p>
+<div class="loginContainer">
+    <div class="form">
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="name" name="name" [(ngModel)]="name"><br>
+            <label for="password">Contraseña</label>
+            <input type="text" id="password" placeholder="password" name="password" [(ngModel)]="password"><br>
+
+            <button type="button" id="loginButton" (click)="login()" routerLink="/ui">Confirmar</button>
+        </form>
+    </div>
+</div>
