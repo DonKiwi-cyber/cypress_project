@@ -28,3 +28,21 @@ h3{
 span.TYPE,.RESULT,.ERROR{
     font-weight: 600;
 }
+
+input{
+    width: 2.5cm;
+}
+
+#errorInput{
+    margin-left: 0.7cm;
+}
+
+#numSegLabel,#errorLabel{
+    margin-left: 5px;
+    margin-right: 6px;
+}
+
+.cut{
+    height: 0px;
+    margin: 10px
+}

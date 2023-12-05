@@ -10,13 +10,15 @@
                     <label for="x0">x0</label>
                     <input id="x0Input" [(ngModel)]="x0" name="x0" class="operator x0" type="number" placeholder="0.0">
 
-                    <label for="x1">x1</label>
-                    <input id="x1Input" [(ngModel)]="x1" name="x1" class="operator x1" type="number" placeholder="0.0"><br>
-
-                    <label for="num_seg">Num-seg</label>
+                    <label for="num_seg" id="numSegLabel">Num-seg</label>
                     <input id="numSegInput" [(ngModel)]="num_seg" name="num_seg" class="operator num_seg" type="number" placeholder="0">
 
-                    <label for="Error">Error</label>
+                    <div class="cut"></div>
+
+                    <label for="x1">x1</label>
+                    <input id="x1Input" [(ngModel)]="x1" name="x1" class="operator x1" type="number" placeholder="0.0">
+
+                    <label for="Error" id="errorLabel">Error</label>
                     <input id="errorInput" [(ngModel)]="Error" name="Error" class="operator Error" type="number" placeholder="0.0">
                 </div>
 
