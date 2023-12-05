@@ -2,7 +2,7 @@ div{
     margin: 20px
 }
 
-div.container{
+div.a5Container{
     width: auto;
     height: 12cm;
 }
@@ -13,7 +13,7 @@ div.result{
     text-align: start;
 }
 
-button.close {
+#closeA5 {
     position: absolute;
     float: right;
     right: 0;

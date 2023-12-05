@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialogRef, MatDialog} from '@angular/material/dialog';
+import {MatDialogRef} from '@angular/material/dialog';
 
 import { B1, B0, Yk } from './functions/linear-regression';
 import { correlation } from './functions/correlation';
