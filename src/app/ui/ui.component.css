@@ -1,19 +1,61 @@
-div {
+div{
     width: auto;
     height: auto;
     margin: 10px;
     text-align: center;
 }
 
-div.title{
-    font-size:2cm;
+.principal{
+    padding-top: 10px
 }
 
-div.form{
+.title{
+    margin: 1cm;
+    font-size: 3em;
+    color: red
+}
+
+.subtitle{
+    font-size: 1.5em;
+    color: blue;
+}
+
+.form{
     padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-style: ridge;
+    border-width: 2px;
+    border-color: black;
 }
 
 button {
     display: inline-block;
-    margin: 20px 14%;
+    margin: 0px 14%;
+    width: auto;
+    height: 1cm;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.description{
+    display: flex;
+    margin-left: 1cm;
+    padding: 10px 15px;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    border-style: dashed;
+    border-width: 2px;
+    background-color: rgb(145, 255, 172)    ;
+}
+
+.description h2{
+    margin-top: 1cm;
+    margin-right: 0.5cm;
+}
+
+.content{
+    text-align: left;
+    display: block;
 }
