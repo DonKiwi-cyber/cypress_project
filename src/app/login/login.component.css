@@ -1,0 +1,51 @@
+.loginContainer{
+    padding-left: 1cm;
+    padding-top: 0.6cm;
+    width: auto;
+}
+
+.subtitle{
+    background-color: rgb(45, 45, 218);
+    width: 7.57cm;
+    height: fit-content;
+    text-align: center;
+    border-style: ridge;
+    border-color: black;
+    border-width: 1px;
+    border-bottom: 0px;
+}
+
+h2{
+    color:antiquewhite;
+    margin: 0px
+}
+
+.inputs{
+    width:fit-content;
+    height: auto;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 0.5cm;
+}
+
+input{
+    background-color: rgb(226, 251, 255);
+    border-style: ridge;
+    border-width: 1px;
+}
+
+#nameLabel{
+    margin-right: 0.78cm;
+}
+
+#passwordLabel{
+    margin-right: 0.2cm;
+}
+
+button{
+    margin-top: 0.25cm;
+    width: fit-content;
+    background-color: aqua;
+    border-color: aquamarine;
+}

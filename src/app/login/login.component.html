@@ -1,12 +1,21 @@
 <div class="loginContainer">
+    <h1>Pruebas de cypress</h1>
     <div class="form">
+        <div class="subtitle">
+            <h2>Iniciar sesión</h2>
+        </div>
         <form>
-            <label for="name">Nombre</label>
-            <input type="text" id="name" placeholder="name" name="name" [(ngModel)]="name"><br>
-            <label for="password">Contraseña</label>
-            <input type="text" id="password" placeholder="password" name="password" [(ngModel)]="password"><br>
+            <div class="inputs">
+                <label for="name" id="nameLabel">Nombre</label>
+                <input type="text" id="name" placeholder="name" name="name" [(ngModel)]="name"><br>
+                <p></p>
+                <label for="password" id="passwordLabel">Contraseña</label>
+                <input type="text" id="password" placeholder="password" name="password" [(ngModel)]="password"><br>
+            </div>
 
-            <button type="button" id="loginButton" (click)="login()" routerLink="/ui">Confirmar</button>
+            <div class="button">
+                <button type="button" id="loginButton" (click)="login()">Confirmar</button>
+            </div>
         </form>
     </div>
 </div>
