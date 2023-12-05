@@ -1,28 +1,28 @@
-<div class="container">
+<div class="a1Container">
     <div class="header">
         <h1>Resultados</h1>
-        <button type="button" (click)="close()">X</button>
+        <button type="button" id="closeA1" (click)="close()">X</button>
     </div>
     <div class="mean">
         <h2>Media</h2>
         <div class="proxy">
             <h3>proxy size: </h3>
-            <p>{{media_proxy_size}}</p>
+            <p id="meanData">{{media_proxy_size}}</p>
         </div>
         <div class="dev">
             <h3>dev hours: </h3>
-            <p>{{media_dev_hours}}</p>
+            <p id="meanData">{{media_dev_hours}}</p>
         </div>
     </div>
     <div class="stddev">
         <h2>Desviación estándar</h2>
         <div class="proxy">
             <h3>proxy size: </h3>
-            <p>{{stddev_proxy_size}}</p>
+            <p id="stddevData">{{stddev_proxy_size}}</p>
         </div>
         <div class="dev">
             <h3>dev hours: </h3>
-            <p>{{stddev_dev_hours}}</p>
+            <p id="stddevData">{{stddev_dev_hours}}</p>
         </div>
     </div>   
 </div>

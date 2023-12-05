@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialogRef, MatDialog} from '@angular/material/dialog';
+import {MatDialogRef} from '@angular/material/dialog';
 
 import { media } from './functions/media';
 import { stddev } from './functions/stddev';

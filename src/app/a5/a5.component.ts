@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialogRef, MatDialog} from '@angular/material/dialog';
+import {MatDialogRef} from '@angular/material/dialog';
 
 import { t_student } from './functions/t-student';
 import { simpson } from './functions/simpson';
@@ -23,8 +23,9 @@ export class A5Component implements OnInit{
 
   result = 0;
   type = "";
+  err = "";
 
-  err = ""
+  empty = true;
 
   ngOnInit(): void {}
 
@@ -33,32 +34,39 @@ export class A5Component implements OnInit{
   }
 
   realizeFunction(){
-    if (this.dof != 0){
-      this.result = t_student(this.x0, this.x1, this.function, this.num_seg, this.dof);
-      const result2 = t_student(this.x0, this.x1, this.function, this.num_seg*2, this.dof);
-      if (error(this.result, result2, this.Error) == true){
-        this.err = "aprobado"
+    if(this.ifEmpty()==true){
+      if (this.function == "t_student"){
+        this.result = t_student(this.x0, this.x1, this.function, this.num_seg, this.dof);
+        const result2 = t_student(this.x0, this.x1, this.function, this.num_seg*2, this.dof);
+        if (error(this.result, result2, this.Error) == true){
+          this.err = "aprobado"
+        }
+        else{
+          this.err = "desaprobado"
+        }
+        this.type = "T-student:"
       }
       else{
-        this.err = "desaprobado"
+        this.result = simpson(this.x0, this.x1, this.num_seg, this.function);
+        const result2 = simpson(this.x0, this.x1, this.num_seg, this.function);
+        if (error(this.result, result2, this.Error) == true){
+          this.err = "aprobado"
+        }
+        else{
+          this.err = "desaprobado"
+        }
+        this.type = "Simpson:"
       }
-      this.type = "T-student:"
     }
     else{
-      this.result = simpson(this.x0, this.x1, this.num_seg, this.function);
-      const result2 = simpson(this.x0, this.x1, this.num_seg, this.function);
-      if (error(this.result, result2, this.Error) == true){
-        this.err = "aprobado"
-      }
-      else{
-        this.err = "desaprobado"
-      }
-      this.type = "Simpson:"
+      this.result = 0
+      this.type = "información deficiente"
+      this.err = "información deficiente"
     }
   }
 
   disabled(){
-    let varDof = document.getElementById("dof") as HTMLInputElement;
+    let varDof = document.getElementById("dofInput") as HTMLInputElement;
     if (this.function == "t_student"){
       varDof.disabled = false;
     }
@@ -66,5 +74,28 @@ export class A5Component implements OnInit{
       varDof.disabled = true;
       this.dof = 0;
     }
+  }
+
+  ifEmpty(): boolean{
+    let value: boolean;
+    if (this.function == "t_student"){
+      if(this.x0 == null || this.x1 == null || this.num_seg == null || 
+        this.Error == null || this.dof == null){
+          value = false;
+        }
+        else{
+          value = true;
+        }
+    }
+    else{
+      if(this.x0 == null || this.x1 == null || this.num_seg == null || 
+        this.Error == null || this.function == null){
+          value = false;
+        }
+        else{
+          value = true;
+        }
+    }
+    return value;
   }
 }
